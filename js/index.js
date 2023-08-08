@@ -170,7 +170,69 @@ window.addEventListener("DOMContentLoaded", function(e) {
             }
         });
     });
+    const readMore = document.querySelectorAll(".review-full .reviews-grid__item-text_link");
+    readMore.forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const fullToggle = link.parentElement;
+            link.parentElement.parentElement.querySelector(".review-full_text").style.display = "inline";
+            fullToggle.style.display = "none";
+        });
+    });
+
+    const galleries = document.querySelectorAll(".contacts-photogallery__row-item");
+    galleries.forEach(gallery => {
+        gallery.addEventListener("click", e => {
+            e.preventDefault();
+            const galleryModal = document.querySelector("#gallery-modal");
+            galleryModal.classList.remove("modal-closed");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    const closeButtons = document.querySelectorAll(".modal-close");
+    closeButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            btn.parentElement.classList.add("modal-closed");
+            document.body.style.overflowY = "visible";
+        });
+    });
+
+    document.querySelectorAll(".license").forEach(license => {
+        license.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.getElementById("license-modal").classList.remove("modal-closed");
+            document.body.style.overflow = "hidden";
+        });
+    });
 });
+
+window.addEventListener("scroll", ev => {
+   const headerHeight = document.querySelector(".preheader").offsetHeight + document.querySelector(".header").offsetHeight + document.querySelector(".header-slider").offsetHeight;
+   if (window.scrollY > headerHeight) {
+       document.querySelector(".header").classList.add("header-fixed");
+   } else {
+       document.querySelector(".header").classList.remove("header-fixed");
+   }
+});
+
+const gallerySlider = new Splide( '#gallery-slider' , {
+    perPage: 1,
+    arrows: true,
+    pagination: false
+});
+
+const galleryThumbnailCarousel = new Splide( '#gallery-thumbnail-carousel', {
+    fixedWidth: 100,
+    gap       : 10,
+    pagination: false,
+    isNavigation: true,
+    arrows: false
+});
+
+gallerySlider.sync(galleryThumbnailCarousel);
+gallerySlider.mount();
+galleryThumbnailCarousel.mount();
 
 const licenses = new Splide( '#licenses-slider' , {
     perPage: 5,
@@ -259,3 +321,17 @@ doctors.on("move", () => {
 });
 
 doctors.mount();
+
+// const myPopup = new Popup({
+//     id: "my-popup",
+//     title: "My First Popup",
+//     content: `
+//         An example popup.
+//         Supports multiple lines.`,
+// });
+//
+// const button = document.getElementById("popup");
+//
+// button.addEventListener('click', () => {
+//     myPopup.show();
+// });
