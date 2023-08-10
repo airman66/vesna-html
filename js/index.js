@@ -29,58 +29,6 @@ const headerSlider = new Swiper('.header-slider .swiper', {
     }
 });
 
-// const doctorPrev = document.querySelector(".doctors-slider .button-prev");
-//
-// doctorPrev.addEventListener("click", () => {
-//     document.querySelector(".doctors .swiper .swiper-button-prev").click();
-// });
-//
-// const doctorNext = document.querySelector(".doctors-slider .button-next");
-//
-// doctorNext.addEventListener("click", () => {
-//     document.querySelector(".doctors .swiper .swiper-button-next").click();
-// });
-
-// const doctorsSlider = new Swiper(".doctors .swiper", {
-//     slidesPerView: 3,
-//     breakpoints: {
-//         // when window width is >= 320px
-//         320: {
-//             slidesPerView: 1
-//         },
-//         // when window width is >= 640px
-//         670: {
-//             slidesPerView: 2
-//         },
-//         1300: {
-//             slidesPerView: 3
-//         }
-//     },
-//     speed: 400,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: false,
-//         type: "fraction",
-//         formatFractionCurrent: (number) => {
-//             return `0${number}`;
-//         },
-//         formatFractionTotal: (number) => {
-//             return `0${number}`;
-//         },
-//         currentClass: "slider-pagintaion-current",
-//         totalClass: "slider-pagintaion-total",
-//         renderFraction: function (currentClass, totalClass) {
-//             return '<span class="' + currentClass + '"></span>' +
-//                 '<span class="fraction"> / </span>' +
-//                 '<span class="' + totalClass + '"></span>';
-//         }
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     }
-// });
-
 window.addEventListener("resize", function(e) {
     const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     const mapElement = document.getElementById("map");
@@ -205,6 +153,53 @@ window.addEventListener("DOMContentLoaded", function(e) {
             document.body.style.overflow = "hidden";
         });
     });
+
+    document.querySelectorAll(".reviews-videos__item").forEach(video => {
+        video.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.getElementById("video-modal").classList.remove("modal-closed");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    const burger = document.getElementById("burger");
+    const mainMenu = document.querySelector(".header-mobile__nav:not(.header-mobile__nav--child)");
+    burger.addEventListener("click", () => {
+        document.querySelector(".header-mobile-wrapper").classList.add("opened");
+        document.body.style.overflow = "hidden";
+    });
+    document.querySelector(".header-mobile__head-close").addEventListener("click", () => {
+        document.body.style.overflowY = "visible";
+        document.querySelector(".header-mobile-wrapper").classList.remove("opened");
+        document.querySelectorAll(".header-mobile__nav").forEach(nav => {
+            nav.style.display = "none";
+        });
+        mainMenu.style.display = "block";
+    });
+
+    const mobileParents = document.querySelectorAll(".header-mobile__link-parent");
+    const mobileChildrenClose = document.querySelectorAll(".header-mobile__nav.header-mobile__nav--child > .header-mobile__nav-prev");
+
+    mobileChildrenClose.forEach(button => {
+        const parent = document.getElementById(button.parentElement.dataset.parent).parentElement;
+        button.addEventListener("click", () => {
+            document.querySelectorAll(".header-mobile__nav").forEach(nav => {
+                nav.style.display = "none";
+            });
+            parent.style.display = "block";
+        });
+    });
+
+    mobileParents.forEach(parent => {
+        const child = document.getElementById(parent.dataset.child);
+        parent.addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelectorAll(".header-mobile__nav").forEach(nav => {
+                nav.style.display = "none";
+            });
+            child.style.display = "block";
+        });
+    });
 });
 
 window.addEventListener("scroll", ev => {
@@ -321,17 +316,3 @@ doctors.on("move", () => {
 });
 
 doctors.mount();
-
-// const myPopup = new Popup({
-//     id: "my-popup",
-//     title: "My First Popup",
-//     content: `
-//         An example popup.
-//         Supports multiple lines.`,
-// });
-//
-// const button = document.getElementById("popup");
-//
-// button.addEventListener('click', () => {
-//     myPopup.show();
-// });
