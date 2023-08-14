@@ -1951,15 +1951,15 @@ main {
     }
 
     .section-title {
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 22px;
+        line-height: 22px;
         font-weight: 600;
         letter-spacing: 1px;
     }
 
     .section-morelink {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         font-weight: 350;
         letter-spacing: 1px;
     }
@@ -1993,8 +1993,8 @@ main {
     .branches_grid-item__title {
         margin: 0 0 0 10px;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .services-form {
@@ -2006,8 +2006,8 @@ main {
         padding-top: 12px;
         padding-bottom: 13px;
         border-radius: 0 15px 15px 0;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .services-form__input {
@@ -2016,13 +2016,13 @@ main {
         padding-top: 12px;
         padding-bottom: 13px;
         padding-left: 10px;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .services-form__input::placeholder {
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .services-popular__title {
@@ -2039,8 +2039,8 @@ main {
         padding-left: 40px;
         padding-top: 16px;
         padding-bottom: 17px;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .services-popular__grid-item:nth-child(1),
@@ -2076,14 +2076,14 @@ main {
     }
 
     .promotions-row__item-title {
-        font-size: 20px;
-        line-height: 23px;
+        font-size: 22px;
+        line-height: 1.15;
         margin: 0 0 10px;
     }
 
     .promotions-row__item-description {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .promotions-row__item-footer {
@@ -2091,21 +2091,21 @@ main {
     }
 
     .promotions-row__item-footer__btn {
-        font-size: 14px;
-        line-height: 18.2px;
+        font-size: 16px;
+        line-height: 1.3;
         padding: 5px 25px 6px 24px;
         border-radius: 15px;
     }
 
     .promotions-row__item-footer__price-new {
-        font-size: 20px;
-        line-height: 23px;
+        font-size: 22px;
+        line-height: 1.15;
     }
 
     .promotions-row__item-footer__price-old {
         font-weight: 350;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
         margin-bottom: 0;
     }
 
@@ -2139,19 +2139,19 @@ main {
     }
 
     .facts-row__item-number {
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 52px;
+        line-height: 52px;
     }
 
     .facts-row__item-explanations {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         margin-top: 5px;
     }
 
     .facts-row__item-description {
-        font-size: 14px;
-        line-height: 15px;
+        font-size: 16px;
+        line-height: 17px;
         width: 47.25%;
     }
 
@@ -2190,19 +2190,19 @@ main {
     }
 
     .reviews-grid__item-header__name {
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .reviews-grid__item-text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.15;
         margin-bottom: 20px;
     }
 
     .reviews-grid__item-footer__date {
-        font-size: 14px;
-        line-height: 11.5px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .reviews-grid__item-header__stars {
@@ -2217,8 +2217,8 @@ main {
         height: 40px;
         width: 125px;
         border-radius: 15px;
-        font-size: 14px;
-        line-height: 18.2px;
+        font-size: 16px;
+        line-height: 1.3;
         padding-top: 10px;
         margin-right: 10px;
     }
@@ -2247,22 +2247,22 @@ main {
 
     .contacts-text__col-block__text h4 {
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contacts-text__col-block__text > p {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .contacts-text__col-block__text h3 {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .contacts-text__col-block__text h2 {
         margin-bottom: 7px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contacts-text__col-block__text-table {
@@ -2273,7 +2273,7 @@ main {
 
     .contacts-text__col-block__text-table p {
         line-height: 1.5;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contacts-text__col-block__icon {
@@ -2285,16 +2285,19 @@ main {
     }
 
     .contacts-getPlace {
-        margin-bottom: 43px;
+        margin-bottom: 23px;
+        flex-direction: column;
     }
 
     .contacts-getPlace__item {
         border-radius: 15px;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .contacts-photogallery__title {
         margin-bottom: 29px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contacts-photogallery__row {
@@ -2308,12 +2311,12 @@ main {
     }
 
     .contacts-photogallery__row-item__title {
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: 2px;
     }
 
     .contacts-photogallery__row-item__quantity {
-        font-size: 14px;
+        font-size: 16px;
         right: 6%;
         bottom: 7%;
     }
@@ -2333,6 +2336,10 @@ main {
         border-radius: 20px;
     }
 
+    .contacts-photogallery__row-item {
+        display: block;
+    }
+
     .blog-grid {
         grid-template-columns: 1fr;
         grid-row-gap: 15px;
@@ -2350,20 +2357,20 @@ main {
 
     .blog-grid__item-date {
         font-family: 'Gill Sans Nova', sans-serif;
-        font-size: 14px;
-        line-height: 15px;
+        font-size: 16px;
+        line-height: 17px;
     }
 
     .blog-grid__item-heading {
         margin-top: 10px;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         margin-bottom: 10px;
     }
 
     .blog-grid__item-excerpt {
         font-weight: 350;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.5;
         margin-bottom: 16px;
     }
@@ -2400,8 +2407,8 @@ main {
     }
 
     .footer-grid-item__title {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
     }
 
     .footer-grid-item__content ul {
@@ -2411,19 +2418,19 @@ main {
     }
 
     .footer-grid-item__content-link {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 2;
     }
 
     .footer-grid-item__content p {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
         /* were font-weight: 400; */
         font-weight: 350;
     }
 
     .bold-p {
-        font-size: 16px!important;
+        font-size: 18px!important;
         margin-top: 11px!important;
     }
 
@@ -2438,7 +2445,7 @@ main {
     }
 
     .footer-copyright p {
-        font-size: 14px;
+        font-size: 16px;
         /* were font-weight: 400; */
         font-weight: 350;
         line-height: 1.5;
@@ -2449,7 +2456,7 @@ main {
     .preheader {
         padding-top: 6px!important;
         padding-bottom: 7px!important;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.5;
     }
 
@@ -2510,8 +2517,8 @@ main {
     }
 
     .header .btn {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .header-logo {
@@ -2551,14 +2558,14 @@ main {
 
     .slider-pagintaion-current,
     .fraction {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         letter-spacing: 1px;
     }
 
     .slider-pagintaion-total {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         letter-spacing: 1.5px;
     }
 
@@ -2600,20 +2607,20 @@ main {
 
     .header-slider__slide-text h2 {
         font-weight: 600;
-        font-size: 25px;
-        line-height: 31.25px;
+        font-size: 27px;
+        line-height: 1.25;
         margin-bottom: 140px;
     }
 
     .header-slider__slide-text h3 {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 1.5;
         margin-bottom: 10px;
         font-weight: 500;
     }
 
     .header-slider__slide-text p {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 350;
         line-height: 1.25;
         margin-bottom: 120px;
@@ -2639,13 +2646,13 @@ main {
     .doctors-search__caption {
         grid-column: 1/3;
         margin: 0;
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .doctors-search__select-discipline, .doctors-search__input {
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
         border-radius: 15px;
         padding-left: 10px;
         padding-top: 12px;
@@ -2655,8 +2662,8 @@ main {
     }
 
     .doctors-search__input::placeholder {
-        font-size: 14px;
-        line-height: 16.1px;
+        font-size: 16px;
+        line-height: 1.15;
     }
 
     .doctors-slider .container {
@@ -2686,22 +2693,22 @@ main {
 
     .doctors-slider__slide-text__name {
         font-weight: 500;
-        font-size: 25px;
-        line-height: 28.75px;
+        font-size: 27px;
+        line-height: 1.15;
         margin: 0 0 15px;
     }
 
     .doctors-slider__slide-text__description {
         font-weight: 350;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 1.5;
         margin: 0 0 29px;
     }
 
     .doctors .btn {
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 1.3;
         font-weight: 500;
-        line-height: 19.5px;
         margin-right: 10px;
         padding: 12px 33px;
     }
@@ -2727,7 +2734,7 @@ main {
     }
 
     .textphoto p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.15;
         margin-bottom: 7px;
         margin-top: 7px;
@@ -2746,8 +2753,8 @@ main {
     }
 
     .text h3 {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         margin-bottom: 24px;
     }
 
@@ -2757,16 +2764,16 @@ main {
     }
 
     .text p {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 11px;
     }
 
     .text strong {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .text li {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .backcall {
@@ -2775,13 +2782,13 @@ main {
 
     .backcall-title {
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 5px;
     }
 
     .backcall-caption {
         max-width: 337px;
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: 0.6px;
     }
 
@@ -2800,24 +2807,24 @@ main {
         padding-top: 13px;
         padding-bottom: 13px;
         padding-left: 7px;
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 15px;
     }
 
     .backcall-form__input::placeholder {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .backcall-form__submit {
         border-radius: 15px;
-        font-size: 14px;
+        font-size: 16px;
         max-width: 125px;
         padding-top: 10px;
         padding-bottom: 11px;
     }
 
     .backcall-form p {
-        font-size: 14px;
+        font-size: 16px;
         padding-top: 0;
     }
 
@@ -2834,7 +2841,7 @@ main {
     }
 
     .another-services__title {
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: 1.5px;
         margin-bottom: 25px;
     }
@@ -2844,7 +2851,7 @@ main {
     }
 
     .another-services__grid-item {
-        font-size: 14px;
+        font-size: 16px;
         padding: 16px 10px 17px 35px;
     }
 
@@ -2867,12 +2874,12 @@ main {
     }
 
     .accordion-section__title {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .accordion-section__text p {
         margin-bottom: 11px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .accordion-section__button {
@@ -2981,20 +2988,20 @@ main {
 
     .doctors-slider__slide-text__name {
         line-height: 1.15;
-        font-size: 14px;
+        font-size: 16px;
         margin: 0 0 5px;
     }
 
     .doctors-slider__slide-text__description {
         /* were font-weight: 400; */
         font-weight: 350;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.5;
         margin: 0 0 20px;
     }
 
     .doctors .btn {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.3;
         margin-right: 0;
         padding: 6px 11px;
