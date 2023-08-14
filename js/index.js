@@ -86,17 +86,17 @@ window.addEventListener("DOMContentLoaded", function(e) {
             accordion.dataset.state = "close";
         }
         if (accordion.dataset.state === "open") {
-            accordion.querySelector(".accordion-section__button img").src = "img/accordion-open.png";
+            accordion.querySelector(".accordion-section__button img").src = "img/accordion-open.svg";
         }
 
         accordion.addEventListener("mouseover", () => {
             if (accordion.dataset.state === "close") {
-                accordion.querySelector(".accordion-section__button img").src = "img/plus-hover.png";
+                accordion.querySelector(".accordion-section__button img").src = "img/plus-hover.svg";
             }
         });
         accordion.addEventListener("mouseout", () => {
             if (accordion.dataset.state === "close") {
-                accordion.querySelector(".accordion-section__button img").src = "img/plus.png";
+                accordion.querySelector(".accordion-section__button img").src = "img/plus.svg";
             }
         });
 
@@ -104,17 +104,17 @@ window.addEventListener("DOMContentLoaded", function(e) {
             if (accordion.dataset.state === "close") {
                 accordionSections.forEach(item => {
                     item.dataset.state = "close";
-                    item.querySelector(".accordion-section__button img").src = "img/plus.png";
+                    item.querySelector(".accordion-section__button img").src = "img/plus.svg";
                 });
                 accordion.dataset.state = "open";
-                accordion.querySelector(".accordion-section__button img").src = "img/accordion-open.png";
+                accordion.querySelector(".accordion-section__button img").src = "img/accordion-open.svg";
             } else if (accordion.dataset.state === "open") {
                 accordionSections.forEach(item => {
                     item.dataset.state = "close";
-                    item.querySelector(".accordion-section__button img").src = "img/plus.png";
+                    item.querySelector(".accordion-section__button img").src = "img/plus.svg";
                 });
                 accordion.dataset.state = "close";
-                accordion.querySelector(".accordion-section__button img").src = "img/plus.png";
+                accordion.querySelector(".accordion-section__button img").src = "img/plus.svg";
             }
         });
     });
@@ -166,10 +166,12 @@ window.addEventListener("DOMContentLoaded", function(e) {
     const mainMenu = document.querySelector(".header-mobile__nav:not(.header-mobile__nav--child)");
     burger.addEventListener("click", () => {
         document.querySelector(".header-mobile-wrapper").classList.add("opened");
+        document.querySelector(".header-mobile-wrapper").classList.remove("closed");
         document.body.style.overflow = "hidden";
     });
     document.querySelector(".header-mobile__head-close").addEventListener("click", () => {
         document.body.style.overflowY = "visible";
+        document.querySelector(".header-mobile-wrapper").classList.add("closed");
         document.querySelector(".header-mobile-wrapper").classList.remove("opened");
         document.querySelectorAll(".header-mobile__nav").forEach(nav => {
             nav.style.display = "none";
@@ -203,10 +205,13 @@ window.addEventListener("DOMContentLoaded", function(e) {
 });
 
 window.addEventListener("scroll", ev => {
-   const headerHeight = document.querySelector(".preheader").offsetHeight + document.querySelector(".header").offsetHeight + document.querySelector(".header-slider").offsetHeight;
+   const headerHeight = document.querySelector(".preheader").offsetHeight;
+   const fixedHeaderHeight = document.querySelector(".header").offsetHeight;
    if (window.scrollY > headerHeight) {
+       document.body.style.paddingTop = `${fixedHeaderHeight}px`;
        document.querySelector(".header").classList.add("header-fixed");
    } else {
+       document.body.style.paddingTop = `0px`;
        document.querySelector(".header").classList.remove("header-fixed");
    }
 });

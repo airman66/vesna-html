@@ -1,10 +1,4 @@
 @font-face {
-    font-weight: 400;
-    font-family: "Gill Sans Nova";
-    src: url("../fonts/GillSans.otf") format("otf");
-}
-
-@font-face {
     font-weight: 700;
     font-family: "Gill Sans Nova";
     src: url("../fonts/GillSansNovaBold.ttf") format("truetype");
@@ -12,6 +6,12 @@
 
 @font-face {
     font-weight: 350;
+    font-family: "Gill Sans Nova";
+    src: url("../fonts/GillSansNovaBook.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 400;
     font-family: "Gill Sans Nova";
     src: url("../fonts/GillSansNovaBook.ttf") format("truetype");
 }
@@ -32,6 +32,66 @@
     font-weight: 600;
     font-family: "Gill Sans Nova";
     src: url("../fonts/GillSansNovaSemiBold.ttf") format("truetype");
+}
+
+@-webkit-keyframes fadein {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein-reverse {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-moz-keyframes fadein-reverse {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadein-reverse {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 *, *:before, *:after {
@@ -162,6 +222,18 @@ body {
     right: 39px;
 }
 
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: none!important;
+}
+
+#gallery-thumbnail-carousel .splide__slide {
+    opacity: 0.5!important;
+}
+
+#gallery-thumbnail-carousel .splide__slide.is-active {
+    opacity: 1!important;
+}
+
 .preheader {
     background-color: #809CFF;
     color: #ffffff;
@@ -232,8 +304,17 @@ body {
     display: none;
 }
 
+.header-mobile-wrapper.closed {
+    animation: fadein-reverse 0.4s ease-in;
+    visibility: hidden;
+    display: block;
+}
+
+
 .header-mobile-wrapper.opened {
     display: block;
+    animation: fadein 0.4s ease-in normal;
+    opacity: 1;
 }
 
 .header-mobile__nav--child {
@@ -241,17 +322,27 @@ body {
 }
 
 .header-mobile__nav-prev {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     cursor: pointer;
     display: block;
+    font-size: 14px;
+    font-weight: 400;
     width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-size: 25px;
-    border: 1px solid #677BC2;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    border-radius: 15px;
+    text-align: left;
+    position: relative;
+    padding-left: 15px;
+}
+
+.header-mobile__nav-prev:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/polygon.svg");
+    left: -10px;
+    width: 12px;
+    height: 8px;
+    background-repeat: no-repeat;
+    top: 6px;
+    rotate: 90deg;
 }
 
 .header-mobile {
@@ -289,7 +380,7 @@ body {
 .header-mobile__link-parent:after {
     content: "";
     position: absolute;
-    background-image: url(../img/polygon.png);
+    background-image: url("../img/polygon.svg");
     right: 0;
     width: 12px;
     height: 8px;
@@ -325,7 +416,7 @@ body {
     line-height: 1.5;
 }
 
-.header-flex img:first-child {
+.header-flex svg:first-child {
     display: none;
 }
 
@@ -376,7 +467,7 @@ main {
 
 .slider-pagintaion-current,
 .fraction {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
@@ -388,7 +479,7 @@ main {
 }
 
 .slider-pagintaion-total {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     font-weight: 300;
     font-size: 22px;
     line-height: 22px;
@@ -471,16 +562,16 @@ main {
 .header-nav__link-parent:after {
     content: "";
     position: absolute;
-    background-image: url("../img/polygon.png");
+    background-image: url("../img/polygon.svg");
     right: 0;
     width: 12px;
     height: 8px;
     background-repeat: no-repeat;
-    top: 8px;
+    top: 14px;
 }
 
 .header-nav__link-parent:hover:after {
-    background-image: url("../img/polygon-red.png");
+    background-image: url("../img/polygon-red.svg");
 }
 
 .header-nav__link-children {
@@ -561,7 +652,7 @@ main {
 .section-morelink:after {
     display: inline-block;
     content: "";
-    background-image: url("../img/arrow.png");
+    background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     width: 46px;
     height: 29px;
@@ -570,7 +661,7 @@ main {
 }
 
 .section-morelink:hover:after {
-    background-image: url("../img/arrow-hover.png");
+    background-image: url("../img/arrow-hover.svg");
 }
 
 .branches_grid {
@@ -619,7 +710,7 @@ main {
     border: 0;
     cursor: pointer;
     border-radius: 0 20px 20px 0;
-    font-weight: 500;
+    font-weight: 350;
     font-size: 25px;
     line-height: 28.75px;
     color: #FFFFFF;
@@ -679,7 +770,7 @@ main {
     display: inline-block;
     position: absolute;
     content: "";
-    background-image: url("../img/plus.png");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     width: 29px;
     height: 29px;
@@ -688,7 +779,7 @@ main {
 }
 
 .services-popular__grid-item:hover:before {
-    background-image: url("../img/plus-hover.png");
+    background-image: url("../img/plus-hover.svg");
 }
 
 .promotions {
@@ -1110,10 +1201,10 @@ main {
 }
 
 .reviews-grid__item-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans Nova', sans-serif;
     font-weight: 500;
     font-size: 18px;
-    line-height: 20.7px;
+    line-height: 1.15;
     margin: 0 0 25px;
 }
 
@@ -1128,7 +1219,7 @@ main {
 }
 
 .reviews-grid__item-footer__date {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans Nova', sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 13.8px;
@@ -1339,7 +1430,7 @@ main {
 
 .blog-grid__item-date {
     color: #C2CFFF;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans Nova', sans-serif;
     /* were font-weight: 400; */
     font-weight: 350;
     font-size: 14px;
@@ -1364,7 +1455,7 @@ main {
 
 .blog-grid__item .btn {
     padding: 11px 49px 11px 33px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 18.2px;
@@ -1458,11 +1549,11 @@ main {
 }
 
 .textphoto p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     /* were font-weight: 400; */
     font-weight: 350;
-    font-size: 18px;
-    line-height: 20.7px;
+    font-size: 20px;
+    line-height: 1.15;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -1504,27 +1595,27 @@ main {
 
 .text p {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
     /* were font-weight: 400; */
     font-weight: 350;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     margin-bottom: 21px;
 }
 
 .text strong {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
 }
 
 .text li {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
     /* were font-weight: 400; */
     font-weight: 350;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
 }
 
 .text--blue div {
@@ -1552,8 +1643,8 @@ main {
 
 .backcall-caption {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-family: "Gill Sans Nova", sans-serif;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.15;
 }
@@ -1610,7 +1701,7 @@ main {
 }
 
 .backcall-form p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.15;
@@ -1667,7 +1758,7 @@ main {
     display: inline-block;
     position: absolute;
     content: "";
-    background-image: url("../img/plus.png");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     width: 29px;
     height: 29px;
@@ -1676,7 +1767,7 @@ main {
 }
 
 .another-services__grid-item:hover:before {
-    background-image: url("../img/plus-hover.png");
+    background-image: url("../img/plus-hover.svg");
 }
 
 .accordion-section {
@@ -1701,15 +1792,15 @@ main {
 
 .accordion-section__text {
     display: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Gill Sans Nova", sans-serif;
 }
 
 .accordion-section__text p {
     margin-top: 0;
     margin-bottom: 21px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.15;
-    font-weight: 500;
+    font-weight: 350;
 }
 
 .accordion-section__text p:last-child {
@@ -2258,7 +2349,7 @@ main {
     }
 
     .blog-grid__item-date {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Gill Sans Nova', sans-serif;
         font-size: 14px;
         line-height: 15px;
     }
@@ -2379,6 +2470,10 @@ main {
         height: 17px;
     }
 
+    .preheader-item:nth-child(4) .preheader-item__text {
+        display: none;
+    }
+
     .preheader-item:nth-child(1),
     .preheader-item:nth-child(4) {
         display: flex;
@@ -2424,7 +2519,7 @@ main {
         max-width: 100px;
     }
 
-    .header-flex img:first-child {
+    .header-flex svg:first-child {
         display: block;
         margin-right: 10%;
     }
