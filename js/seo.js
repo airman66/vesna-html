@@ -120,6 +120,17 @@ window.addEventListener("DOMContentLoaded", function(e) {
             document.body.style.overflow = "hidden";
         });
     });
+
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.addEventListener("click", (e) => {
+            e.preventDefault();
+            let isBackgroundClick = modal === e.target;
+            if (isBackgroundClick) {
+                modal.classList.add("modal-closed");
+                document.body.style.overflowY = "visible";
+            }
+        });
+    });
 });
 
 const licenses = new Splide( '#licenses-slider' , {
