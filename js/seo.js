@@ -140,7 +140,8 @@ const licenses = new Splide( '#licenses-slider' , {
     breakpoints: {
         430: {
             perPage: 2,
-            gap    : 5
+            gap: "3vw",
+            padding: {left: "3vw"}
         },
         768: {
             perPage: 3,
