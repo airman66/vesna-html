@@ -18,7 +18,7 @@ window.addEventListener("resize", function(e) {
         element.style.height = `${element.offsetWidth*1.395}px`;
     });
 
-    if (width <= 375) {
+    if (width <= 430) {
         videos.forEach(element => {
             element.style.height = `${element.offsetWidth*1.364}px`;
         });
@@ -127,7 +127,7 @@ const licenses = new Splide( '#licenses-slider' , {
     rewind : false,
     gap: 30,
     breakpoints: {
-        375: {
+        430: {
             perPage: 2,
             gap    : 5
         },
@@ -141,7 +141,7 @@ const licenses = new Splide( '#licenses-slider' , {
 const licensesPagination = document.querySelector("#licenses-slider .licenses-pagination");
 
 licenses.on("mounted", () => {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 430) {
         const current = licenses.index + 2;
         const total = licenses.length;
         licensesPagination.querySelector(".slider-pagintaion-current").innerHTML = getlength(current) < 2 ? `0${current}` : `${current}`;
@@ -160,7 +160,7 @@ licenses.on("mounted", () => {
 });
 
 licenses.on("move", () => {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 430) {
         const current = licenses.index + 2;
         const total = licenses.length;
         licensesPagination.querySelector(".slider-pagintaion-current").innerHTML = getlength(current) < 2 ? `0${current}` : `${current}`;

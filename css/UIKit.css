@@ -271,7 +271,7 @@ button.red:hover {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 430px) {
     .section-header {
         margin-bottom: 20px;
         flex-direction: column;

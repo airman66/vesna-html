@@ -848,7 +848,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 430px) {
     .reviews-videos {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 15px;
